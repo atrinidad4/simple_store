@@ -3,6 +3,8 @@
 
 <ul>
   <% @products.each do |product| %>
-    <li><%= link_to product.title, product_path(product) %></li>
+      <%= link_to product.title, product_path(product) %> -
+      <strong>Category:</strong> <%= product.category.name %>
+    </li>
   <% end %>
 </ul>
